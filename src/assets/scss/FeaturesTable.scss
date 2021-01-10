@@ -1,0 +1,44 @@
+.FeaturesTable-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+}
+
+.FeaturesTable-Content{
+    padding: 7px;
+}
+
+.FeaturesTable-Item {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 14px 7px 0;
+  border-bottom: 1px solid #e6e6e6;
+  border-collapse: collapse;
+  font-size: 14px;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.FeaturesTable-Item-Label {
+  min-width: 120px;
+  font-weight: 600;
+  color: #333;
+}
+
+.FeaturesTable-Item-Content {
+  text-align: end;
+  font-weight: 400;
+  color: #666;
+}
+
+@include only-mobile {
+  .FeaturesTable-Item {
+    flex-flow: column;
+  }
+
+  .FeaturesTable-Item-Content {
+    text-align: start;
+  }
+}

@@ -1,0 +1,22 @@
+.Selector-header {
+  padding: 4px 0;
+}
+
+.Selector-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.Selector-item {
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 96%);
+  @include noselect-effect;
+  &:hover {
+    @include shadow-effect;
+  }
+}

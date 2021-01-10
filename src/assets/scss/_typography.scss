@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;786;800;900&display=swap");
+
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+// Converters
+
+@function dp ($_dp){
+  @return (72/160) * $_dp + pt;
+}
+
+@function ptrem ($value){
+  @return ($value/16)+rem;
+}
+
+// Styles
+
+* {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+h1{
+  font-weight: $light;
+  font-size: ptrem(79);
+  letter-spacing: ptrem(-1.5);
+}
+
+h2{
+  font-weight: $light;
+  font-size: ptrem(50);
+  letter-spacing: ptrem(-0.5);
+}
+
+h3{
+  font-weight: $regular;
+  font-size: ptrem(40);
+  letter-spacing: ptrem(0);
+}
+
+h4{
+  font-weight: $regular;
+  font-size: ptrem(28);
+  letter-spacing: ptrem(0.25);
+}
+
+h5{
+  font-weight: $regular;
+  font-size: ptrem(20);
+  letter-spacing: ptrem(0)
+}
+
+h6{
+  font-weight: $medium;
+  font-size: ptrem(17);
+  letter-spacing: ptrem(0.15)
+}
+
+.subtitle1{
+  font-weight: $regular;
+  font-size: ptrem(13);
+  letter-spacing: ptrem(0.15)
+}
+
+.subtitle2{
+  font-weight: $medium;
+  font-size: ptrem(12);
+  letter-spacing: ptrem(0.1)
+}
+
+.body1{
+  font-weight: $regular;
+  font-size: ptrem(13);
+  letter-spacing: ptrem(0.5)
+}
+
+.body2{
+  font-weight: $regular;
+  font-size: ptrem(12);
+  letter-spacing: ptrem(0.25)
+}
+
+button{
+  font-weight: $regular;
+  font-size: ptrem(12);
+  letter-spacing: ptrem(0.25);
+  text-transform: uppercase;
+}
+
+caption{
+  font-weight: $regular;
+  font-size: ptrem(10);
+  letter-spacing: ptrem(0.4)
+}
+
+.overline{
+  font-weight: $regular;
+  font-size: ptrem(8);
+  letter-spacing: ptrem(1.5);
+  text-transform: uppercase;
+}

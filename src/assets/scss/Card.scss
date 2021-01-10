@@ -1,0 +1,199 @@
+@import "./mixins";
+
+.Card {
+  display: inline-flex;
+  flex-direction: column;
+  width: 220px;
+  margin: 8px;
+  border-radius: 0.75rem;
+  background-color: white;
+  box-shadow: hsla(0, 0%, 0%, 0.16) 0px 1px 4px;
+  &:hover {
+    box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+  }
+}
+
+.Card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 0em 0em 1em;
+}
+
+.Card-favbtn {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png");
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  background-position: left;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include noselect-effect;
+  &-checked {
+    animation: heart-burst 0.8s steps(28) forwards;
+    @keyframes heart-burst {
+      0% {
+        background-position: left;
+      }
+      100% {
+        background-position: right;
+      }
+    }
+  }
+}
+
+.Card-tag {
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px;
+  @include noselect-effect;
+  &-new {
+    color: orange;
+    background-color: lighten(orange, 45%);
+  }
+  &-bs {
+    color: goldenrod;
+    background-color: lighten(gold, 44%);
+  }
+  &-cs {
+    color: dodgerblue;
+    background-color: lighten(dodgerblue, 42%);
+  }
+  &-trend {
+    color: blueviolet;
+    background-color: lighten(blueviolet, 45%);
+  }
+  &-editor {
+    color: fuchsia;
+    background-color: lighten(fuchsia, 47%);
+  }
+  &-out {
+    color: crimson;
+    background-color: lighten(crimson, 50%);
+  }
+  &-off {
+    color: olive;
+    background-color: lighten(#d2b48c, 25%);
+  }
+}
+
+.Card-image {
+  overflow: hidden;
+  width: 100%;
+  height: 188px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    object-fit: scale-down;
+  }
+}
+
+.Card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: auto;
+  gap: 8px;
+  padding: 0px 16px 16px 16px;
+}
+
+.Card-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.Card-price {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: $medium;
+  color: dodgerblue;
+}
+
+.Card-oldPrice {
+  color: hsl(0, 0%, 48%);
+  text-decoration: line-through;
+  display: inline-block;
+  font-size: 14px;
+  order: 1;
+}
+
+@include only-mobile {
+  .Card {
+    width: 180px;
+  }
+
+  .Card-favbtn {
+    height: 48px;
+    width: 48px;
+  }
+
+  .Card-image {
+    height: 150px;
+  }
+
+  .Card-name,
+  .Card-price {
+    font-size: 14px;
+  }
+
+  .Card-tag,
+  .Card-oldPrice {
+    font-size: 12px;
+  }
+}
+
+@include dark-mode {
+  .Card {
+    background-color: lighten(#121212, 5%);
+    &:hover {
+      transition: 0.3s;
+      background-color: lighten(#121212, 7%);
+    }
+  }
+
+  .Card-name {
+    color: white;
+  }
+
+  .Card-tag {
+    &-new {
+      color: orange;
+      background-color: darken(orange, 36%);
+    }
+    &-bs {
+      color: goldenrod;
+      background-color: darken(gold, 40%);
+    }
+    &-cs {
+      color: dodgerblue;
+      background-color: darken(dodgerblue, 38%);
+    }
+    &-trend {
+      color: blueviolet;
+      background-color: darken(blueviolet, 45%);
+    }
+    &-editor {
+      color: fuchsia;
+      background-color: darken(fuchsia, 47%);
+    }
+    &-out {
+      color: crimson;
+      background-color: darken(goldenrod, 45%);
+    }
+    &-off {
+      color: olive;
+      background-color: darken(olive, 13%);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// Media Queries
+// Widescreen
+@mixin only-widescreen {
+  @media (min-width: 901px) {
+    @content;
+  }
+}
+// Desktop
+@mixin only-desktop {
+  @media (max-device-width: 900px) and (min-width: 781px) {
+    @content;
+  }
+}
+// tablet
+@mixin only-tablet {
+  @media (max-device-width: 780px) and (min-width: 561px) {
+    @content;
+  }
+}
+// Mobile
+@mixin only-mobile {
+  @media (max-device-width: 560px) {
+    @content;
+  }
+}
+
+// Dark mode
+@mixin dark-mode{
+  @media(prefers-color-scheme: dark){
+    @content;
+  }
+}
+
+// Effects
+@mixin shadow-effect($color: hsla(0, 0%, 0%, 0.2)) {
+  box-shadow: 0 2px 6px 0 $color;
+}
+
+@mixin noselect-effect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                  supported by Chrome, Edge, Opera and Firefox */
+}
