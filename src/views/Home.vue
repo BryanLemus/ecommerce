@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <navbar placeholder="¿Qué puedo encontrar para ti?"/>
-    <div class="bg-deep-purple-50 text-red-400" style="width: 100px; height: 100px">50</div>
+    <div class="bg-deep-purple-50" style="width: 100px; height: 100px">50</div>
     <div class="bg-deep-purple-100" style="width: 100px; height: 100px">100</div>
     <div class="bg-deep-purple-200" style="width: 100px; height: 100px">200</div>
     <div class="bg-deep-purple-300" style="width: 100px; height: 100px">300</div>

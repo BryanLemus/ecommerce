@@ -1,10 +1,16 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <navbar placeholder="¿Qué puedo encontrar para ti?" />
+  <router-view />
 </template>
+
+<script>
+import navbar from "./components/Navbar";
+export default {
+  components:{
+    navbar
+  }
+}
+</script>
 
 <style lang="scss">
 @import "./assets/scss/styles";

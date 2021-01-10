@@ -1,6 +1,6 @@
 <template>
   <div class="navbar" :class="{ 'navbar--search-mode': SearchOpened }">
-    <a href="#" class="navbar-logo">
+    <a @click="$router.push('/')" class="navbar-logo">
       <img src="@/assets/images/logo-8.svg" />
     </a>
     <form class="navbar-search">
