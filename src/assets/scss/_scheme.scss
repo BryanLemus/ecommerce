@@ -1050,3 +1050,18 @@ $scheme: (
     ),
   ),
 );
+
+.bg {
+  @each $name, $color in $scheme {
+    &-#{$name} {
+      @each $tone, $hex in $color {
+        $bgcolor: nth($hex, 1);
+        $fontcolor: nth($hex, 2);
+        &-#{$tone} {
+          background-color: $bgcolor;
+          color: $fontcolor;
+        }
+      }
+    }
+  }
+}
