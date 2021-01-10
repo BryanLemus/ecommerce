@@ -1065,3 +1065,26 @@ $scheme: (
     }
   }
 }
+
+.text {
+  @each $name, $color in $scheme {
+    &-#{$name} {
+      @each $tone, $hex in $color {
+        $color: nth($hex, 1);
+        &-#{$tone} {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+@include dark-mode{
+  body{
+    background-color: #121212;
+    color: white;
+  }
+  img{
+    filter: brightness(0.8) contrast(1.2);
+  }
+}

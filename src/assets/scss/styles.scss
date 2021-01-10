@@ -1,7 +1,7 @@
 // Styles Imports
-@import "./_scheme";
 @import "./_typography";
 @import "./_mixins";
+@import "./_scheme";
 
 // -- Components Styles--
 @import "./Navbar";
@@ -19,16 +19,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-@include dark-mode{
-  body{
-    background-color: #121212;
-    color: white;
-  }
-  img{
-    filter: brightness(0.8) contrast(1.2);
-  }
 }
 
 .highlight {
