@@ -33,60 +33,70 @@ h1{
   font-weight: $light;
   font-size: ptrem(79);
   letter-spacing: ptrem(-1.5);
+  @include dark-mode{color: white}
 }
 
 h2{
   font-weight: $light;
   font-size: ptrem(50);
   letter-spacing: ptrem(-0.5);
+  @include dark-mode{color: white}
 }
 
 h3{
   font-weight: $regular;
   font-size: ptrem(40);
   letter-spacing: ptrem(0);
+  @include dark-mode{color: white}
 }
 
 h4{
   font-weight: $regular;
   font-size: ptrem(28);
   letter-spacing: ptrem(0.25);
+  @include dark-mode{color: white}
 }
 
 h5{
   font-weight: $regular;
   font-size: ptrem(20);
-  letter-spacing: ptrem(0)
+  letter-spacing: ptrem(0);
+  @include dark-mode{color: white}
 }
 
 h6{
   font-weight: $medium;
   font-size: ptrem(17);
-  letter-spacing: ptrem(0.15)
+  letter-spacing: ptrem(0.15);
+  @include dark-mode{color: white}
 }
 
 .subtitle1{
   font-weight: $regular;
   font-size: ptrem(13);
-  letter-spacing: ptrem(0.15)
+  letter-spacing: ptrem(0.15);
+  @include dark-mode{color: white}
 }
 
 .subtitle2{
   font-weight: $medium;
   font-size: ptrem(12);
-  letter-spacing: ptrem(0.1)
+  letter-spacing: ptrem(0.1);
+  @include dark-mode{color: white}
 }
 
 .body1{
   font-weight: $regular;
   font-size: ptrem(13);
-  letter-spacing: ptrem(0.5)
+  letter-spacing: ptrem(0.5);
+  @include dark-mode{color: white}
 }
 
 .body2{
   font-weight: $regular;
   font-size: ptrem(12);
-  letter-spacing: ptrem(0.25)
+  letter-spacing: ptrem(0.25);
+  @include dark-mode{color: white}
 }
 
 button{
@@ -94,12 +104,14 @@ button{
   font-size: ptrem(12);
   letter-spacing: ptrem(0.25);
   text-transform: uppercase;
+  @include dark-mode{color: white}
 }
 
 caption{
   font-weight: $regular;
   font-size: ptrem(10);
-  letter-spacing: ptrem(0.4)
+  letter-spacing: ptrem(0.4);
+  @include dark-mode{color: white}
 }
 
 .overline{
@@ -107,4 +119,5 @@ caption{
   font-size: ptrem(8);
   letter-spacing: ptrem(1.5);
   text-transform: uppercase;
+  @include dark-mode{color: white}
 }

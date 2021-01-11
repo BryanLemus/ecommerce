@@ -1,7 +1,7 @@
 <template>
   <div class="showcase">
     <div class="showcase-header">
-      <h2>{{ title }}</h2>
+      <h4>{{ title }}</h4>
     </div>
     <div class="showcase-content">
       <card
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import card from "./card";
+import card from './Card';
 
 export default {
   name: "showcase",

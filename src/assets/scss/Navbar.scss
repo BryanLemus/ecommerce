@@ -66,6 +66,12 @@
   }
 }
 
+@include dark-mode {
+  .navbar{
+    background-color: #363640
+  }
+}
+
 @include only-mobile {
   .navbar-search {
     display: none;
