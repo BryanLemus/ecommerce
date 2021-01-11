@@ -7,6 +7,9 @@
   top: 0;
   background-color: white;
   z-index: 1;
+  @include dark-mode {
+    background-color: lighten(#121212, 12%);
+  }
 }
 
 .navbar-logo {
@@ -17,6 +20,9 @@
   cursor: pointer;
   img {
     min-width: 8em;
+  }
+  @include dark-mode {
+    filter: invert(100%);
   }
 }
 
@@ -52,23 +58,23 @@
   width: max-content;
   font-size: 14px;
   @include noselect-effect;
-  i{
+  @include dark-mode {
+    color: white;
+  }
+  i {
     font-size: 24px;
   }
   label {
     label {
       display: block;
-      color: gray;
+      color: hsla(0, 0%, 100%, 60%);
     }
   }
   &:hover {
     background-color: whitesmoke;
-  }
-}
-
-@include dark-mode {
-  .navbar{
-    background-color: #363640
+    @include dark-mode {
+      background-color: lighten(#121212, 7%);
+    }
   }
 }
 

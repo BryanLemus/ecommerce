@@ -1,7 +1,7 @@
 <template>
   <div class="showcase">
     <div class="showcase-header">
-      <h4>{{ title }}</h4>
+      <h4> {{ title }} </h4>
     </div>
     <div class="showcase-content">
       <card
