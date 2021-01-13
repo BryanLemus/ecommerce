@@ -43,11 +43,11 @@ export default {
     }
   },
   props: {
-    image: String,
-    tag: String,
-    name: String,
-    price: String,
-    oldPrice: String
+    image: {type: String, default: ''},
+    tag: {type: String, default: ''},
+    name: {type: String, default: ''},
+    price: {type: String, default: ''},
+    oldPrice: {type: String, default: ''}
   }
 };
 </script>
