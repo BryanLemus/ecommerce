@@ -12,7 +12,7 @@
       <div class="Card-image">
         <img v-bind:src="image" />
       </div>
-      <h6 class="Card-name">{{ name }}</h6>
+      <h6 class="Card-title">{{ title }}</h6>
       <label class="Card-price">
         <label>{{ price }}</label>
         <label class="Card-oldPrice">{{ oldPrice }}</label>
@@ -45,7 +45,8 @@ export default {
   props: {
     image: {type: String, default: ''},
     tag: {type: String, default: ''},
-    name: {type: String, default: ''},
+    title: {type: String, default: ''},
+    subtitle: {type: String, default: ''},
     price: {type: String, default: ''},
     oldPrice: {type: String, default: ''}
   }

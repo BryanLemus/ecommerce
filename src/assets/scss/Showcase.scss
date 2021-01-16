@@ -1,7 +1,14 @@
-.showcase-content{
+.Showcase{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5px;
-    padding: 1em;
+    overflow-x: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    } 
+    &-content{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2em;
+        padding: 1em;
+        width: auto;
+    }
 }

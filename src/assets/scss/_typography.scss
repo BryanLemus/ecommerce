@@ -10,15 +10,17 @@ $bold: 700;
 $extra-bold: 800;
 $black: 900;
 
+
 // Converters
 
-@function dp ($_dp){
+@function dp($_dp) {
   @return (72/160) * $_dp + pt;
 }
 
-@function ptrem ($value){
-  @return ($value/16)+rem;
+@function ptrem($value) {
+  @return ($value/16) + rem;
 }
+
 
 // Styles
 
@@ -31,77 +33,77 @@ $black: 900;
 
 h1{
   font-weight: $light;
-  font-size: ptrem(79);
+  font-size: ptrem(93);
   letter-spacing: ptrem(-1.5);
   @include dark-mode{color: white}
 }
 
 h2{
   font-weight: $light;
-  font-size: ptrem(50);
+  font-size: ptrem(58);
   letter-spacing: ptrem(-0.5);
   @include dark-mode{color: white}
 }
 
 h3{
   font-weight: $regular;
-  font-size: ptrem(40);
+  font-size: ptrem(47);
   letter-spacing: ptrem(0);
   @include dark-mode{color: white}
 }
 
 h4{
   font-weight: $regular;
-  font-size: ptrem(28);
+  font-size: ptrem(33);
   letter-spacing: ptrem(0.25);
   @include dark-mode{color: white}
 }
 
 h5{
   font-weight: $regular;
-  font-size: ptrem(20);
+  font-size: ptrem(23);
   letter-spacing: ptrem(0);
   @include dark-mode{color: white}
 }
 
 h6{
   font-weight: $medium;
-  font-size: ptrem(17);
+  font-size: ptrem(19);
   letter-spacing: ptrem(0.15);
   @include dark-mode{color: white}
 }
 
 .subtitle1{
   font-weight: $regular;
-  font-size: ptrem(13);
+  font-size: ptrem(16);
   letter-spacing: ptrem(0.15);
   @include dark-mode{color: white}
 }
 
 .subtitle2{
   font-weight: $medium;
-  font-size: ptrem(12);
+  font-size: ptrem(14);
   letter-spacing: ptrem(0.1);
   @include dark-mode{color: white}
 }
 
 .body1{
   font-weight: $regular;
-  font-size: ptrem(13);
+  font-size: ptrem(16);
   letter-spacing: ptrem(0.5);
   @include dark-mode{color: white}
 }
 
 .body2{
   font-weight: $regular;
-  font-size: ptrem(12);
+  font-size: ptrem(14);
   letter-spacing: ptrem(0.25);
   @include dark-mode{color: white}
 }
 
 button{
-  font-weight: $regular;
-  font-size: ptrem(12);
+  font-weight: $medium;
+  font-size: ptrem(14);
   letter-spacing: ptrem(0.25);
   text-transform: uppercase;
   @include dark-mode{color: white}
@@ -109,14 +111,14 @@ button{
 
 caption{
   font-weight: $regular;
-  font-size: ptrem(10);
+  font-size: ptrem(12);
   letter-spacing: ptrem(0.4);
   @include dark-mode{color: white}
 }
 
 .overline{
   font-weight: $regular;
-  font-size: ptrem(8);
+  font-size: ptrem(10);
   letter-spacing: ptrem(1.5);
   text-transform: uppercase;
   @include dark-mode{color: white}

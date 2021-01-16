@@ -1079,12 +1079,12 @@ $scheme: (
   }
 }
 
-@include dark-mode{
-  body{
+@include dark-mode {
+  body {
     background-color: #121212;
     color: white;
   }
-  img{
+  img {
     filter: brightness(0.8) contrast(1.2);
   }
 }

@@ -1,13 +1,48 @@
 <template>
-  <showcase title="New Arrivals"/>
+  <showcase>
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+  </showcase>
+  <showcase>
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+  </showcase>
+  <showcase>
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+  </showcase>
+  <showcase>
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+    <card />
+  </showcase>
 </template>
 
 <script>
-import navbar from './../components/Navbar';
-import showcase from './../components/Showcase';
+import Card from "../components/Card.vue";
+import Showcase from "./../components/Showcase";
 
 export default {
-  name: 'Home',
-  components:{ navbar, showcase }
-}
+  name: "Home",
+  components: { Showcase, Card },
+};
 </script>

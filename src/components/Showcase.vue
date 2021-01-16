@@ -1,34 +1,13 @@
 <template>
-  <div class="showcase">
-    <div class="showcase-header">
-      <h4> {{ title }} </h4>
-    </div>
-    <div class="showcase-content">
-      <card
-        v-for="item in items"
-        :index="index"
-        :key="item.id"
-        :image="item.image"
-        :tag="item.tag"
-        :name="item.name"
-        :price="item.price"
-        :oldPrice="item.oldPrice"
-      />
+  <div class="Showcase">
+    <div class="Showcase-content">
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
-import card from './Card';
-
 export default {
-  name: "showcase",
-  components: {
-    card
-  },
-  props: {
-    title: String,
-    items: []
-  }
+  name: "showcase"
 };
 </script>
