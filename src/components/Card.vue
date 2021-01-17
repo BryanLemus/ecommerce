@@ -1,6 +1,8 @@
 <template>
   <div class="Card">
-    <img class="Card-image" :src="image" />
+    <dvi class="Card-image">
+      <img :src="image"/>
+    </dvi>
     <label class="Card-tag">{{ tag }}</label>
     <h6 class="Card-title">{{ title }}</h6>
     <label class="Card-subtitle subtitle1 text-gray-500">{{ subtitle }}</label>

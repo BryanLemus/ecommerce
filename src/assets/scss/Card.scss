@@ -1,16 +1,27 @@
 .Card {
   display: grid;
-  grid-template-rows: 300px auto auto 24px auto;
-  width: 300px;
+  grid-template-rows: 200px auto auto 24px auto;
+  row-gap: 5px;
+  column-gap: 5px;
+  width: 200px;
   height: auto;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1rem;
-  
+  box-shadow: hsla(0, 0%, 0%, 0.1) 0px 4px 12px;
+  @include noselect-effect;
+
+  @include dark-mode{
+    background-color: lighten(#121212, 7%);
+  }
+
   &-image {
-    min-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
     grid-column: 1 / 4;
+    background-color: white;
+    padding: 0.5rem;
+    img {
+      min-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
   }
 
   &-tag {
@@ -51,12 +62,10 @@
     border-radius: 50%;
     height: 64px;
     width: 64px;
-    //border: none;
     outline: none;
     cursor: pointer;
     position: relative;
-    left: 180px;
-    bottom: 0px;
+    left: 80px;
     @include noselect-effect;
     &-checked {
       animation: heart-burst 0.8s steps(28) forwards;
