@@ -62,13 +62,7 @@
     color: white;
   }
   i {
-    font-size: 24px;
-  }
-  label {
-    label {
-      display: block;
-      color: hsla(0, 0%, 100%, 60%);
-    }
+    font-size: 32px;
   }
   &:hover {
     background-color: whitesmoke;
@@ -83,7 +77,7 @@
     display: none;
   }
 
-  .navbar-button label {
+  .navbar-button .Subheader {
     display: none;
   }
 

@@ -19,33 +19,32 @@
       </div>
       <div class="navbar-button">
         <i class="las la-shopping-cart" />
-        <label>
-          Cart
-          <label>0 items</label>
-        </label>
+        <subheader title="Cart" subtitle="0 items" />
       </div>
       <div class="navbar-button">
         <i class="las la-user-circle" />
-        <label>
-          Hello,
-          <label>{{ username }}</label>
-        </label>
+        <subheader title="Sing in" :subtitle="username" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import subheader from "./Subheader";
+
 export default {
   name: "navbar",
-  data: function() {
+  data: function () {
     return {
-      SearchOpened: false
+      SearchOpened: false,
     };
+  },
+  components: {
+    subheader,
   },
   props: {
     username: { type: String, default: "Sign in" },
-    placeholder: String
-  }
+    placeholder: String,
+  },
 };
 </script>

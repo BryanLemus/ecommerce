@@ -1,5 +1,4 @@
 <template>
-  <section-header title="New Arrivals" />
   <showcase>
     <card
       tag="Coming Soon"
@@ -39,7 +38,7 @@
       oldPrice="$220.99"
     />
     <card
-      tag="Campaing"
+      tag="Campaign"
       image="https://images-na.ssl-images-amazon.com/images/I/71WPGXQLcLL._AC_SL1384_.jpg"
       title="AMD Ryzen 5 3600 Procesador de escritorio desbloqueado de 6 núcleos y 12 hilos con Wraith Stealth Cooler"
       subtitle="by AMD"
@@ -53,45 +52,14 @@
       price="$94.99"
     />
   </showcase>
-  <section-header title="Offers" />
-  <showcase>
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-  </showcase>
-  <section-header title="Top Trending" />
-  <showcase>
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-  </showcase>
-  <section-header title="Best Sellers" />
-  <showcase>
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-    <card />
-  </showcase>
 </template>
 
 <script>
 import Card from "../components/Card.vue";
-import SectionHeader from "../components/SectionHeader.vue";
 import Showcase from "./../components/Showcase";
 
 export default {
   name: "Home",
-  components: { Showcase, Card, SectionHeader },
+  components: { Showcase, Card },
 };
 </script>

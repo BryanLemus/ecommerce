@@ -1,13 +1,13 @@
 <template>
-  <div class="SectionHeader">
-    <h6 class="SectionHeader-title">{{ title }}</h6>
-    <div class="SectionHeader-subtitle subtitle1 text-gray-600">{{ subtitle }}</div>
+  <div class="Subheader">
+    <h6 class="Subheader-title">{{ title }}</h6>
+    <div class="Subheader-subtitle type-subtitle1 text-gray-600">{{ subtitle }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SectionHeader",
+  name: "Subheader",
   props: {
     title: {type: String, default: ''},
     subtitle: {type: String, default: ''},
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.SectionHeader-title, .SectionHeader-subtitle{
+.Subheader-title, .Subheader-subtitle{
 display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;

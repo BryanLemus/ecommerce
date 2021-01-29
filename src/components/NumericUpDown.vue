@@ -68,8 +68,7 @@ export default {
       z-index: 1;
     }
     &:active {
-      background: $blue-light;
-      color: white;
+      @extend bg-blue-500;
     }
   }
 }

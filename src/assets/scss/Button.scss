@@ -1,0 +1,28 @@
+.Button {
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+  font-weight: $medium;
+  font-size: ptrem(14);
+  letter-spacing: ptrem(0.25);
+  text-transform: uppercase;
+  @include noselect-effect;
+  &:hover {
+    background-color: darken(whitesmoke, 5%);
+  }
+  &:active {
+    background-color: #3F51B5;
+    color: white;
+  }
+  @include dark-mode {
+    background-color: #121212;
+    color: white;
+    &:hover{
+      background-color: lighten(#121212, 5%);
+    }
+    &:active{
+      background-color: #303F9F;
+    }
+  }
+}

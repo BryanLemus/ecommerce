@@ -73,53 +73,47 @@ h6{
   @include dark-mode{color: white}
 }
 
-.subtitle1{
-  font-weight: $regular;
-  font-size: ptrem(16);
-  letter-spacing: ptrem(0.15);
-  @include dark-mode{color: white}
-}
-
-.subtitle2{
-  font-weight: $medium;
-  font-size: ptrem(14);
-  letter-spacing: ptrem(0.1);
-  @include dark-mode{color: white}
-}
-
-.body1{
-  font-weight: $regular;
-  font-size: ptrem(16);
-  letter-spacing: ptrem(0.5);
-  @include dark-mode{color: white}
-}
-
-.body2{
-  font-weight: $regular;
-  font-size: ptrem(14);
-  letter-spacing: ptrem(0.25);
-  @include dark-mode{color: white}
-}
-
-button{
-  font-weight: $medium;
-  font-size: ptrem(14);
-  letter-spacing: ptrem(0.25);
-  text-transform: uppercase;
-  @include dark-mode{color: white}
-}
-
-caption{
-  font-weight: $regular;
-  font-size: ptrem(12);
-  letter-spacing: ptrem(0.4);
-  @include dark-mode{color: white}
-}
-
-.overline{
-  font-weight: $regular;
-  font-size: ptrem(10);
-  letter-spacing: ptrem(1.5);
-  text-transform: uppercase;
-  @include dark-mode{color: white}
+.tp{
+  &-subtitle1{
+    font-weight: $regular;
+    font-size: ptrem(16);
+    letter-spacing: ptrem(0.15);
+    @include dark-mode{color: white}
+  }
+  
+  &-subtitle2{
+    font-weight: $medium;
+    font-size: ptrem(14);
+    letter-spacing: ptrem(0.1);
+    @include dark-mode{color: white}
+  }
+  
+  &-body1{
+    font-weight: $regular;
+    font-size: ptrem(16);
+    letter-spacing: ptrem(0.5);
+    @include dark-mode{color: white}
+  }
+  
+  &-body2{
+    font-weight: $regular;
+    font-size: ptrem(14);
+    letter-spacing: ptrem(0.25);
+    @include dark-mode{color: white}
+  }
+  
+  &-caption{
+    font-weight: $regular;
+    font-size: ptrem(12);
+    letter-spacing: ptrem(0.4);
+    @include dark-mode{color: white}
+  }
+  
+  &-overline{
+    font-weight: $regular;
+    font-size: ptrem(10);
+    letter-spacing: ptrem(1.5);
+    text-transform: uppercase;
+    @include dark-mode{color: white}
+  }
 }

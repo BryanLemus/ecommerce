@@ -1,22 +1,22 @@
 .Card {
-  display: grid;
-  grid-template-rows: 200px auto auto 24px auto;
-  row-gap: 5px;
-  column-gap: 5px;
-  width: 200px;
-  height: auto;
+  flex-direction: column;
   padding: 1rem;
   box-shadow: hsla(0, 0%, 0%, 0.1) 0px 4px 12px;
+  background-color: #ffffff;
+  border-radius: 4px;
   @include noselect-effect;
 
-  @include dark-mode{
+  @include dark-mode {
     background-color: lighten(#121212, 7%);
   }
 
   &-image {
-    grid-column: 1 / 4;
+    display: flex;
     background-color: white;
     padding: 0.5rem;
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
     img {
       min-height: 100%;
       max-width: 100%;
@@ -25,8 +25,31 @@
   }
 
   &-tag {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
+    @extend .tp-overline;
+    &-cs{
+      color: dodgerblue;
+    }
+    &-new{
+      color: orange;
+    }
+    &-trend{
+      color: blueviolet;
+    }
+    &-editor{
+      color: fuchsia;
+    }
+    &-bs{
+      color: goldenrod;
+    }
+    &-out{
+      color: red;
+    }
+    &-campaign{
+      color: crimson;
+    }
+    &-off{
+      color: teal;
+    }
   }
 
   &-title {
@@ -34,14 +57,18 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    grid-row: 3 / 4;
-    grid-column: 1 / 4;
+  }
+
+  &-subtitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &-price {
     display: inline-block;
     font-weight: $bold;
-    grid-row: 5;
     vertical-align: center;
   }
 
@@ -49,11 +76,12 @@
     display: inline-block;
     text-decoration: line-through;
     opacity: 0.6;
-    grid-row: 5;
     vertical-align: center;
+    margin: 0 0 0 5px;
   }
 
   &-favbtn {
+    display: inline-block;
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png");
     background-repeat: no-repeat;
     background-size: 2900%;
@@ -64,8 +92,9 @@
     width: 64px;
     outline: none;
     cursor: pointer;
-    position: relative;
-    left: 80px;
+    position: absolute;
+    left: 200px;
+    bottom: 150px;
     @include noselect-effect;
     &-checked {
       animation: heart-burst 0.8s steps(28) forwards;
